@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Cash Register</title>
+</head>
+
+<body>
+    <h1>Cash Register</h1>
+    <h3 class="description">Enter the bill amount and cash given to know the minimum number of notes required to return.
+    </h3>
+    <label class="bill-amount">Bill Amount:</label>
+    <div><input type="number" id="bill-amount" placeholder="Enter the bill amount..."/></div>
+    <label class="cash-amount">Cash Amount:</label>
+    <div><input type="number" id="cash-amount"  placeholder="Enter the cash amount..."/></div>
+    <button id="btnCheck">CHECK</button>
+    <p id="error"></p>
+    <label class="table-caption">Return changes:</label>
+
+    <table class="change-table" style="border: 1px solid black;">
+        <tr>
+            <th>No.of Notes</th>
+            <td class="no-of-notes"> </td>
+            <td class="no-of-notes"> </td>
+            <td class="no-of-notes"> </td>
+            <td class="no-of-notes"> </td>
+            <td class="no-of-notes"> </td>
+            <td class="no-of-notes"> </td>
+            <td class="no-of-notes"> </td>
+            <td class="no-of-notes"> </td>
+        </tr>
+        <tr>
+            <th>Notes:</th>
+                <td>2000</td>
+                <td>500</td>
+                <td>100</td>
+                <td>50</td>
+                <td>20</td>
+                <td>10</td>
+                <td>5</td>
+                <td>1</td>
+        </tr>
+    </table>
+</body>
+<script src="app.js"></script>
+
+</html>
+
+
+
+
+
+<!-- const billAmount = document.querySelector("#bill-amount");
+const cashGiven = document.querySelector("#cash-given");
+const checkBtn = document.querySelector("#btnCheck");
+const errorMessage = document.querySelector("#error-message");
+const quantityOfNotes = document.querySelectorAll(".no-of-notes");
+const availableNotes = [2000, 500, 100, 50, 20, 10, 5, 1];
+checkBtn.addEventListener("click", validateBillAmount);
+ 
+function validateBillAmount() {
+    
+    if (billAmount.value > 0) {
+
+        if (cashGiven.value >= billAmount.value) {
+
+            const balanceAmount = cashGiven.value - billAmount.value;
+            calculateChange(balanceAmount);
+        }   
+         
+    } 
+    else {
+        showMessage("Invalid Bill Amount!!!!");
+
+    }
+}
+
+function calculateChange(balanceAmount) {
+    for (let i = 0; i < availableNotes.length; i++) {
+        const noteQuantity = Math.trunc(balanceAmount / availableNotes[i]);
+        balanceAmount = balanceAmount % availableNotes[i];
+        quantityOfNotes[i].innerText = noteQuantity;
+    }
+
+}
+
+function showMessage(msg) {
+    errorMessage.innerText = msg;
+} -->
