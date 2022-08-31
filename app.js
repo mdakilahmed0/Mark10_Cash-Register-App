@@ -2,7 +2,7 @@ const billAmount = document.querySelector("#bill-amount")
 const cashAmount = document.querySelector("#cash-amount")
 const checkBtn = document.querySelector("#btnCheck")
 const errorMsg = document.querySelector("#error")
-const amountQuantity = document.querySelector(".no-of-notes")
+const amountQuantity = document.querySelectorAll(".no-of-notes")
 const availableNotes = [2000, 500, 100, 50, 20, 10, 5, 1];
 
 checkBtn.addEventListener("click", validateReturnAmount);
